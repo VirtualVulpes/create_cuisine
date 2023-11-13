@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"2": "createcuisine:block/trellis",
+		"particle": "createcuisine:block/trellis"
+	},
+	"elements": [
+		{
+			"name": "alt",
+			"from": [6, 6, 10],
+			"to": [10, 10, 16],
+			"faces": {
+				"north": {"uv": [6, 6, 10, 10], "texture": "#missing"},
+				"east": {"uv": [6, 12, 12, 16], "texture": "#2"},
+				"south": {"uv": [6, 12, 10, 16], "texture": "#2"},
+				"west": {"uv": [6, 12, 12, 16], "texture": "#2"},
+				"up": {"uv": [0, 0, 6, 4], "rotation": 90, "texture": "#2"},
+				"down": {"uv": [0, 0, 6, 4], "rotation": 90, "texture": "#2"}
+			}
+		}
+	]
+}

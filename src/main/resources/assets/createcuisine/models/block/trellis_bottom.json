@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"2": "createcuisine:block/trellis",
+		"particle": "createcuisine:block/trellis"
+	},
+	"elements": [
+		{
+			"name": "bottom",
+			"from": [6, 0, 6],
+			"to": [10, 6, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [6, 8, 10, 14], "texture": "#2"},
+				"east": {"uv": [8, 4, 12, 10], "texture": "#2"},
+				"south": {"uv": [8, 0, 12, 6], "texture": "#2"},
+				"west": {"uv": [6, 0, 10, 6], "texture": "#2"},
+				"up": {"uv": [0, 0, 4, 4], "rotation": 180, "texture": "#2"},
+				"down": {"uv": [0, 0, 4, 4], "texture": "#2"}
+			}
+		}
+	]
+}

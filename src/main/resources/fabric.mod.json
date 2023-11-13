@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "createcuisine",
+  "version": "${version}",
+  "name": "Create Cuisine",
+  "description": "Create Cuisine adds new foods in Minecraft through the Create mod!",
+  "authors": [
+    "VirtualVulpes"
+  ],
+  "contact": {
+    "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
+  },
+  "license": "MIT",
+  "icon": "assets/createcuisine/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.virtualvulpes.createcuisine.CreateCuisine"
+    ],
+    "client": [
+      "io.github.virtualvulpes.createcuisine.CreateCuisineClient"
+    ]
+  },
+  "mixins": [
+    "createcuisine.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "create": "${create_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
