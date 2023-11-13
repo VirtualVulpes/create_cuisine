@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 
 public class ModBlocks {
-	public static final Block TRELLIS = registerBlock("trellis",
+	public static final Block TRELLIS = registerBlock("tredllis",
 			new TrellisBlock(FabricBlockSettings.create().nonOpaque().ignitedByLava().sound(SoundType.WOOD).mapColor(MapColor.WOOD)));
 
 	private static Block registerBlock(String name, Block block) {
