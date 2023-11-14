@@ -1,0 +1,6 @@
+{
+  "parent": "createcuisine:block/trellis_top",
+  "textures": {
+    "texture": "createcuisine:block/acacia_trellis"
+  }
+}

@@ -2,12 +2,12 @@
   "multipart": [
     {
       "apply": {
-        "model": "createcuisine:block/trellis_base"
+        "model": "createcuisine:block/birch_trellis_base"
       }
     },
     {
       "apply": {
-        "model": "createcuisine:block/trellis_side"
+        "model": "createcuisine:block/birch_trellis_side"
       },
       "when": {
         "north": "true"
@@ -15,7 +15,7 @@
     },
     {
       "apply": {
-        "model": "createcuisine:block/trellis_side",
+        "model": "createcuisine:block/birch_trellis_side",
         "y": 90
       },
       "when": {
@@ -24,7 +24,7 @@
     },
     {
       "apply": {
-        "model": "createcuisine:block/trellis_side_alt"
+        "model": "createcuisine:block/birch_trellis_side_alt"
       },
       "when": {
         "south": "true"
@@ -32,7 +32,7 @@
     },
     {
       "apply": {
-        "model": "createcuisine:block/trellis_side_alt",
+        "model": "createcuisine:block/birch_trellis_side_alt",
         "y": 90
       },
       "when": {
@@ -41,7 +41,7 @@
     },
     {
       "apply": {
-        "model": "createcuisine:block/trellis_top"
+        "model": "createcuisine:block/birch_trellis_top"
       },
       "when": {
         "up": "true"
@@ -49,7 +49,7 @@
     },
     {
       "apply": {
-        "model": "createcuisine:block/trellis_bottom"
+        "model": "createcuisine:block/birch_trellis_bottom"
       },
       "when": {
         "down": "true"

@@ -1,0 +1,6 @@
+{
+  "parent": "createcuisine:block/trellis_inventory",
+  "textures": {
+    "texture": "createcuisine:block/mangrove_trellis"
+  }
+}

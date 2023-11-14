@@ -1,0 +1,6 @@
+{
+  "parent": "createcuisine:block/trellis_bottom",
+  "textures": {
+    "texture": "createcuisine:block/crimson_trellis"
+  }
+}

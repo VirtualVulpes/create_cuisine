@@ -1,0 +1,6 @@
+{
+  "parent": "createcuisine:block/trellis_side",
+  "textures": {
+    "texture": "createcuisine:block/birch_trellis"
+  }
+}

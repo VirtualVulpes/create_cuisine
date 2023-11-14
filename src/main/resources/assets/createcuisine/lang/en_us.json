@@ -1,4 +1,15 @@
 {
-  "block.createcuisine.trellis": "Trellis"
+  "block.createcuisine.oak_trellis": "Oak Trellis",
+  "block.createcuisine.spruce_trellis": "Spruce Trellis",
+  "block.createcuisine.birch_trellis": "Birch Trellis",
+  "block.createcuisine.jungle_trellis": "Jungle Trellis",
+  "block.createcuisine.acacia_trellis": "Acacia Trellis",
+  "block.createcuisine.dark_oak_trellis": "Dark Oak Trellis",
+  "block.createcuisine.mangrove_trellis": "Mangrove Trellis",
+  "block.createcuisine.cherry_trellis": "Cherry Trellis",
+  "block.createcuisine.crimson_trellis": "Crimson Trellis",
+  "block.createcuisine.warped_trellis": "Warped Trellis",
+  "block.createcuisine.bamboo_trellis": "Bamboo Trellis",
+  "tag.item.createcuisine.trellises": "Trellises"
 }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "createcuisine:block/trellis_base",
+  "textures": {
+    "texture": "createcuisine:block/dark_oak_trellis"
+  }
+}
