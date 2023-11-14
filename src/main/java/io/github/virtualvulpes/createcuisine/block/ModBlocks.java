@@ -34,7 +34,6 @@ public class ModBlocks {
 			new TrellisBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD).mapColor(MapColor.CRIMSON_STEM)));
 	public static final Block WARPED_TRELLIS = registerBlock("warped_trellis",
 			new TrellisBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD).mapColor(MapColor.WARPED_STEM)));
-
 	public static final Block BAMBOO_TRELLIS = registerBlock("bamboo_trellis",
 			new TrellisBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).ignitedByLava().sound(SoundType.BAMBOO_WOOD).mapColor(MapColor.COLOR_YELLOW)));
 

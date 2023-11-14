@@ -54,6 +54,14 @@
       "when": {
         "down": "true"
       }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/pumpkin"
+      },
+      "when": {
+        "has_grapes": "true"
+      }
     }
   ]
 }

@@ -10,6 +10,8 @@
   "block.createcuisine.crimson_trellis": "Crimson Trellis",
   "block.createcuisine.warped_trellis": "Warped Trellis",
   "block.createcuisine.bamboo_trellis": "Bamboo Trellis",
-  "tag.item.createcuisine.trellises": "Trellises"
+  "tag.item.createcuisine.trellises": "Trellises",
+  "item.createcuisine.grapes": "Grapes",
+  "itemGroup.createcuisine.items": "Create Cuisine"
 }
 

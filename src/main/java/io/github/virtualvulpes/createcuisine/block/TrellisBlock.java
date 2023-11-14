@@ -1,27 +1,50 @@
 package io.github.virtualvulpes.createcuisine.block;
 
+import io.github.virtualvulpes.createcuisine.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class TrellisBlock extends TrellisCollisionsBlock {
+	public static final BooleanProperty HAS_GRAPES = BooleanProperty.create("has_grapes");
 
 	public TrellisBlock(BlockBehaviour.Properties properties) {
 		super(properties);
-		this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(WATERLOGGED, false).setValue(UP, false).setValue(DOWN, false));
+		this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(WATERLOGGED, false).setValue(UP, false).setValue(DOWN, false).setValue(HAS_GRAPES, false));
+	}
+
+	@Override
+	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+		if(player.getItemInHand(hand).getItem().equals(ModItems.GRAPES)){
+			if(!level.getBlockState(pos).getValue(HAS_GRAPES)){
+				level.setBlockAndUpdate(pos, state.setValue(HAS_GRAPES, true));
+			}
+		}
+
+		return InteractionResult.SUCCESS;
 	}
 
 	@Override
@@ -75,6 +98,6 @@ public class TrellisBlock extends TrellisCollisionsBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(NORTH, EAST, WEST, SOUTH, UP, DOWN, WATERLOGGED);
+		builder.add(NORTH, EAST, WEST, SOUTH, UP, DOWN, WATERLOGGED, HAS_GRAPES);
 	}
 }
