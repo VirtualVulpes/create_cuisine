@@ -15,6 +15,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -40,11 +41,14 @@ public class TrellisBlock extends TrellisCollisionsBlock {
 	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 		if(player.getItemInHand(hand).getItem().equals(ModItems.GRAPES)){
 			if(!level.getBlockState(pos).getValue(HAS_GRAPES)){
-				level.setBlockAndUpdate(pos, state.setValue(HAS_GRAPES, true));
+				if(hit.getDirection() == Direction.DOWN && level.getBlockState(pos.below()).getBlock().equals(Blocks.AIR)){
+					level.setBlockAndUpdate(pos, state.setValue(HAS_GRAPES, true));
+					return InteractionResult.SUCCESS;
+				}
 			}
 		}
 
-		return InteractionResult.SUCCESS;
+		return InteractionResult.PASS;
 	}
 
 	@Override
