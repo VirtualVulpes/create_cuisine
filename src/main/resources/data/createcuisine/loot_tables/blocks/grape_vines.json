@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "createcuisine:grapes"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "createcuisine:grape_vines",
+          "properties": {
+            "age": "2"
+          }
+        }
+      ]
+    }
+  ]
+}

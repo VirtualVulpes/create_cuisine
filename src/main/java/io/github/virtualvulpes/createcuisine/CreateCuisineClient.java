@@ -23,5 +23,6 @@ public class CreateCuisineClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CRIMSON_TRELLIS, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_TRELLIS, RenderType.cutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BAMBOO_TRELLIS, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GRAPE_VINES, RenderType.cutout());
 	}
 }

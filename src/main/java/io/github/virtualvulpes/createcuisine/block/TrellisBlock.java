@@ -1,5 +1,6 @@
 package io.github.virtualvulpes.createcuisine.block;
 
+import io.github.fabricators_of_create.porting_lib.common.util.IPlantable;
 import io.github.virtualvulpes.createcuisine.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,25 +31,9 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class TrellisBlock extends TrellisCollisionsBlock {
-	public static final BooleanProperty HAS_GRAPES = BooleanProperty.create("has_grapes");
-
 	public TrellisBlock(BlockBehaviour.Properties properties) {
 		super(properties);
-		this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(WATERLOGGED, false).setValue(UP, false).setValue(DOWN, false).setValue(HAS_GRAPES, false));
-	}
-
-	@Override
-	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-		if(player.getItemInHand(hand).getItem().equals(ModItems.GRAPES)){
-			if(!level.getBlockState(pos).getValue(HAS_GRAPES)){
-				if(hit.getDirection() == Direction.DOWN && level.getBlockState(pos.below()).getBlock().equals(Blocks.AIR)){
-					level.setBlockAndUpdate(pos, state.setValue(HAS_GRAPES, true));
-					return InteractionResult.SUCCESS;
-				}
-			}
-		}
-
-		return InteractionResult.PASS;
+		this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(WATERLOGGED, false).setValue(UP, false).setValue(DOWN, false));
 	}
 
 	@Override
@@ -102,6 +87,6 @@ public class TrellisBlock extends TrellisCollisionsBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(NORTH, EAST, WEST, SOUTH, UP, DOWN, WATERLOGGED, HAS_GRAPES);
+		builder.add(NORTH, EAST, WEST, SOUTH, UP, DOWN, WATERLOGGED);
 	}
 }

@@ -2,6 +2,7 @@ package io.github.virtualvulpes.createcuisine;
 
 import com.jozufozu.flywheel.backend.RenderLayer;
 
+import io.github.virtualvulpes.createcuisine.block.ModBlockTags;
 import io.github.virtualvulpes.createcuisine.block.ModBlocks;
 import io.github.virtualvulpes.createcuisine.item.ModItemGroups;
 import io.github.virtualvulpes.createcuisine.item.ModItems;
@@ -20,6 +21,7 @@ public class CreateCuisine implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
+		ModBlockTags.registerModBlockTags();
 	}
 
 	public static ResourceLocation id(String path) {

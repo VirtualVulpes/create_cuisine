@@ -1,0 +1,6 @@
+{
+  "parent": "createcuisine:block/grape_vines",
+  "textures": {
+    "texture": "createcuisine:block/grape_vines_stage2"
+  }
+}

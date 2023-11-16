@@ -54,61 +54,6 @@
       "when": {
         "down": "true"
       }
-    },
-    {
-      "apply": {
-        "model": "createcuisine:block/trellis_grape_base"
-      },
-      "when": {
-        "has_grapes": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "createcuisine:block/trellis_grape_base",
-        "y": 90
-      },
-      "when": {
-        "has_grapes": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "createcuisine:block/trellis_grape_side"
-      },
-      "when": {
-        "has_grapes": "true",
-        "north": true
-      }
-    },
-    {
-      "apply": {
-        "model": "createcuisine:block/trellis_grape_side_alt"
-      },
-      "when": {
-        "has_grapes": "true",
-        "south": true
-      }
-    },
-    {
-      "apply": {
-        "model": "createcuisine:block/trellis_grape_side",
-        "y": 90
-      },
-      "when": {
-        "has_grapes": "true",
-        "east": true
-      }
-    },
-    {
-      "apply": {
-        "model": "createcuisine:block/trellis_grape_side_alt",
-        "y": 90
-      },
-      "when": {
-        "has_grapes": "true",
-        "west": true
-      }
     }
   ]
 }

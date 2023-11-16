@@ -38,7 +38,7 @@ public class TrellisCollisionsBlock extends Block implements SimpleWaterloggedBl
 	private final Object2IntMap<BlockState> stateToIndex = new Object2IntOpenHashMap<>();
 
 
-	public TrellisCollisionsBlock(BlockBehaviour.Properties properties) {
+	public TrellisCollisionsBlock(Properties properties) {
 		super(properties);
 		this.collisionShapeByIndex = this.makeShapes();
 		this.shapeByIndex = this.makeShapes();
@@ -87,14 +87,17 @@ public class TrellisCollisionsBlock extends Block implements SimpleWaterloggedBl
 		return voxelShapes;
 	}
 
+	@Override
 	public boolean propagatesSkylightDown(BlockState state, BlockGetter level, BlockPos pos) {
 		return !(Boolean)state.getValue(WATERLOGGED);
 	}
 
+	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return this.shapeByIndex[this.getAABBIndex(state)];
 	}
 
+	@Override
 	public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return this.collisionShapeByIndex[this.getAABBIndex(state)];
 	}
@@ -135,14 +138,17 @@ public class TrellisCollisionsBlock extends Block implements SimpleWaterloggedBl
 		});
 	}
 
+	@Override
 	public FluidState getFluidState(BlockState state) {
 		return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
 	}
 
+	@Override
 	public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
 		return false;
 	}
 
+	@Override
 	public BlockState rotate(BlockState state, Rotation rotation) {
 		return switch (rotation) {
 			case CLOCKWISE_180 ->
@@ -155,6 +161,7 @@ public class TrellisCollisionsBlock extends Block implements SimpleWaterloggedBl
 		};
 	}
 
+	@Override
 	public BlockState mirror(BlockState state, Mirror mirror) {
 		switch (mirror) {
 			case LEFT_RIGHT:
