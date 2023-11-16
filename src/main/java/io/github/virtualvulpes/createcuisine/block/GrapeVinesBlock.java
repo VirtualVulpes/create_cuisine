@@ -80,13 +80,14 @@ public class GrapeVinesBlock extends Block implements BonemealableBlock, IPlanta
 		}
 	}
 
+	@Override
 	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 		int age = state.getValue(AGE);
 		boolean grown = age == 2;
 		if (!grown && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
 			return InteractionResult.PASS;
 		} else if (grown) {
-			int amount = 1 + level.random.nextInt(2);
+			int amount = 2 + level.random.nextInt(2);
 			popResource(level, pos, new ItemStack(ModItems.GRAPES, amount));
 			level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
 			BlockState blockState = state.setValue(AGE, 0);

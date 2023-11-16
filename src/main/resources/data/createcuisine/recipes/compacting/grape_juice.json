@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "createcuisine:grapes"
+    }
+  ],
+  "results": [
+    {
+      "amount": 8100,
+      "fluid": "create:chocolate"
+    }
+  ]
+}
