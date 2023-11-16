@@ -1,7 +1,7 @@
 package io.github.virtualvulpes.createcuisine.block;
 
 import io.github.fabricators_of_create.porting_lib.common.util.IPlantable;
-import io.github.virtualvulpes.createcuisine.item.ModItems;
+import io.github.virtualvulpes.createcuisine.item.AllItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -57,7 +57,7 @@ public class GrapeVinesBlock extends Block implements BonemealableBlock, IPlanta
 
 	@Override
 	public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
-		return new ItemStack(ModItems.GRAPES);
+		return new ItemStack(AllItems.GRAPES);
 	}
 
 	@Override
@@ -88,7 +88,7 @@ public class GrapeVinesBlock extends Block implements BonemealableBlock, IPlanta
 			return InteractionResult.PASS;
 		} else if (grown) {
 			int amount = 2 + level.random.nextInt(2);
-			popResource(level, pos, new ItemStack(ModItems.GRAPES, amount));
+			popResource(level, pos, new ItemStack(AllItems.GRAPES, amount));
 			level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
 			BlockState blockState = state.setValue(AGE, 0);
 			level.setBlock(pos, blockState, 2);

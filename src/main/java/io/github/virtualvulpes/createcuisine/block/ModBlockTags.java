@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 public class ModBlockTags {
 	public static final TagKey<Block> TRELLISES = TagKey.create(Registries.BLOCK, new ResourceLocation("createcuisine", "trellises"));
 
-	public static void registerModBlockTags(){
+	public static void register(){
 
 	}
 }
