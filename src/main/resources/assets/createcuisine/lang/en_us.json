@@ -12,7 +12,10 @@
   "block.createcuisine.bamboo_trellis": "Bamboo Trellis",
   "tag.item.createcuisine.trellises": "Trellises",
   "item.createcuisine.grapes": "Grapes",
-  "itemGroup.createcuisine.items": "Create Cuisine",
-  "block.createcuisine.grape_vines": "Grape Vines"
+  "creativeModeTab.createcuisine.main_tab": "Create Cuisine",
+  "block.createcuisine.grape_vines": "Grape Vines",
+  "block.createcuisine.grape_juice": "Grape Juice",
+  "fluid.createcuisine.grape_juice": "Grape Juice",
+  "item.createcuisine.grape_juice_bucket": "Grape Juice Bucket"
 }
 

@@ -1,5 +1,6 @@
 package io.github.virtualvulpes.createcuisine.item;
 
+import io.github.virtualvulpes.createcuisine.CreateCuisine;
 import io.github.virtualvulpes.createcuisine.block.AllBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
@@ -9,9 +10,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-public class AllItemGroups {
-	private static final CreativeModeTab ITEMS = registerItemGroup(FabricItemGroup.builder().icon(() -> new ItemStack(AllBlocks.GRAPE_VINES.asItem()))
-			.title(Component.translatable(("itemGroup.createcuisine.items")))
+import static io.github.virtualvulpes.createcuisine.CreateCuisine.REGISTRATE;
+
+public class AllCreativeModeTabs {
+
+	private static final CreativeModeTab MAIN_TAB = registerItemGroup(FabricItemGroup.builder().icon(() -> new ItemStack(AllBlocks.GRAPE_VINES.asItem()))
+			.title(Component.translatable(("creativeModeTab.createcuisine.main_tab")))
 			.displayItems((context, entries) -> {
 			entries.accept(AllBlocks.OAK_TRELLIS);
 			entries.accept(AllBlocks.SPRUCE_TRELLIS);
@@ -29,7 +33,7 @@ public class AllItemGroups {
 			.build());
 
 	private static CreativeModeTab registerItemGroup(CreativeModeTab group) {
-		return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation("creativecuisine", "items"), group);
+		return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CreateCuisine.asResource("main_tab"), group);
 	}
 
 	public static void register() {

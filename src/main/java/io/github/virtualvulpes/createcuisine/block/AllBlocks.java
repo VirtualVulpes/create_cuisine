@@ -82,10 +82,6 @@ public class AllBlocks {
 
 	public static final BlockEntry<GrapeVinesBlock> GRAPE_VINES = REGISTRATE.object("grape_vines").block(GrapeVinesBlock::new)
 			.properties(p -> p.instabreak().sound(SoundType.CROP).mapColor(MapColor.PLANT).randomTicks().noCollission().pushReaction(PushReaction.DESTROY))
-//			.item(BlockItem::new)
-//			.lang("Test")
-//			.model((c, p) -> p.generated(c, CreateCuisine.asResource("item/grapes")))
-//			.build()
 			.register();
 
 	public static void register() {

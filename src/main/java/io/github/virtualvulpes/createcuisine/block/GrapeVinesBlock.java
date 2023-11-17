@@ -40,7 +40,7 @@ public class GrapeVinesBlock extends Block implements BonemealableBlock, IPlanta
 	}
 
 	public boolean canAttachTo(BlockState state) {
-		return state.is(ModBlockTags.TRELLISES);
+		return state.is(AllBlockTags.TRELLISES);
 	}
 
 	@Override
