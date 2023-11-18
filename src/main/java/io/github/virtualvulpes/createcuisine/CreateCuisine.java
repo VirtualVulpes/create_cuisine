@@ -4,7 +4,6 @@ import com.tterrag.registrate.Registrate;
 
 import io.github.virtualvulpes.createcuisine.block.AllBlockTags;
 import io.github.virtualvulpes.createcuisine.block.AllBlocks;
-import io.github.virtualvulpes.createcuisine.events.ClientEvents;
 import io.github.virtualvulpes.createcuisine.fluid.AllFluids;
 import io.github.virtualvulpes.createcuisine.item.AllCreativeModeTabs;
 import io.github.virtualvulpes.createcuisine.item.AllItems;

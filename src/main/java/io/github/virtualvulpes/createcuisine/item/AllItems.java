@@ -22,6 +22,9 @@ public class AllItems {
 			.properties(p -> p.food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1f).fast().build()))
 			.register();
 
+	public static final ItemEntry<Item> GRAPE_SKINS = REGISTRATE.item("grape_skins", Item::new)
+			.register();
+
 	public static void register() {
 
 	}

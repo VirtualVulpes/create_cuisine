@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createcuisine:block/fermentation_vat"
+    }
+  }
+}

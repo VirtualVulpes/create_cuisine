@@ -28,7 +28,9 @@ public class AllCreativeModeTabs {
 			entries.accept(AllBlocks.CRIMSON_TRELLIS);
 			entries.accept(AllBlocks.WARPED_TRELLIS);
 			entries.accept(AllBlocks.BAMBOO_TRELLIS);
-			entries.accept(AllBlocks.GRAPE_VINES.asItem());
+			entries.accept(AllBlocks.GRAPE_VINES);
+			entries.accept(AllItems.GRAPE_SKINS);
+			entries.accept(AllBlocks.FERMENTATION_VAT);
 			})
 			.build());
 

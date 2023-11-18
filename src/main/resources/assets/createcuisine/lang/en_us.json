@@ -16,6 +16,8 @@
   "block.createcuisine.grape_vines": "Grape Vines",
   "block.createcuisine.grape_juice": "Grape Juice",
   "fluid.createcuisine.grape_juice": "Grape Juice",
-  "item.createcuisine.grape_juice_bucket": "Grape Juice Bucket"
+  "item.createcuisine.grape_juice_bucket": "Grape Juice Bucket",
+  "item.createcuisine.grape_skins": "Grape Skins",
+  "block.createcuisine.fermentation_vat": "Fermentation Vat"
 }
 

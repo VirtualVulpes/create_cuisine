@@ -43,25 +43,9 @@ public class ClientEvents {
 			if (AllFluids.GRAPE_JUICE.get().isSame(fluid)) {
 				fogData.scaleFarPlaneDistance(0.03125F);
 				return true;
-			} else if (entity.isSpectator()) {
-				return false;
-			} else {
-				ItemStack divingHelmet = DivingHelmetItem.getWornItem(entity);
-				if (!divingHelmet.isEmpty()) {
-					if (FluidHelper.isWater(fluid)) {
-						fogData.scaleFarPlaneDistance(6.25F);
-						return true;
-					}
-
-					if (FluidHelper.isLava(fluid) && AllItems.NETHERITE_DIVING_HELMET.isIn(divingHelmet)) {
-						fogData.setNearPlaneDistance(-4.0F);
-						fogData.setFarPlaneDistance(20.0F);
-						return true;
-					}
-				}
-
-				return false;
 			}
+
+				return false;
 		}
 	}
 
@@ -79,8 +63,7 @@ public class ClientEvents {
 				.isSame(fluid)) {
 			event.setRed(98 / 255f);
 			event.setGreen(32 / 255f);
-			event.setBlue(32 / 255f);
-			return;
+			event.setBlue(68 / 255f);
 		}
 	}
 }

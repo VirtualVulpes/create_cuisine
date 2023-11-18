@@ -18,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
@@ -82,6 +83,12 @@ public class AllBlocks {
 
 	public static final BlockEntry<GrapeVinesBlock> GRAPE_VINES = REGISTRATE.object("grape_vines").block(GrapeVinesBlock::new)
 			.properties(p -> p.instabreak().sound(SoundType.CROP).mapColor(MapColor.PLANT).randomTicks().noCollission().pushReaction(PushReaction.DESTROY))
+			.register();
+
+	public static final BlockEntry<FermentationVatBlock> FERMENTATION_VAT = REGISTRATE.object("fermentation_vat").block(FermentationVatBlock::new)
+			.properties(p -> p.mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(0.6F).sound(SoundType.WOOD).ignitedByLava())
+			.item()
+			.build()
 			.register();
 
 	public static void register() {

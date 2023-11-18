@@ -9,6 +9,9 @@
     {
       "amount": 8100,
       "fluid": "createcuisine:grape_juice"
+    },
+    {
+      "item": "createcuisine:grape_skins"
     }
   ]
 }
