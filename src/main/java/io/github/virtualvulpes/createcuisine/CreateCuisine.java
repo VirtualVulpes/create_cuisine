@@ -4,6 +4,7 @@ import com.tterrag.registrate.Registrate;
 
 import io.github.virtualvulpes.createcuisine.block.AllBlockTags;
 import io.github.virtualvulpes.createcuisine.block.AllBlocks;
+import io.github.virtualvulpes.createcuisine.block.entity.AllBlockEntities;
 import io.github.virtualvulpes.createcuisine.fluid.AllFluids;
 import io.github.virtualvulpes.createcuisine.item.AllCreativeModeTabs;
 import io.github.virtualvulpes.createcuisine.item.AllItems;
@@ -22,6 +23,7 @@ public class CreateCuisine implements ModInitializer {
 		AllFluids.register();
 		AllCreativeModeTabs.register();
 		AllBlockTags.register();
+		AllBlockEntities.register();
 
 		REGISTRATE.register();
 
